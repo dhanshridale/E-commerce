@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="shortcut icon" href="img/k.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body class="m-0 p-0 bg-violet-300">
+    <%- include('../components/header.ejs') %>
+        <main class="mt-[80px] mr-[40px] min-h-[60.6vh] ml-[40px] flex flex-col items-center gap-[20px]">
+        <div class="h-[100px] w-11/12 bg-white flex justify-around items-center rounded-sm">
+                
+       Orders History
+        </div>
+        <% if ( order.length>0){ %>
+            <div class="w-11/12  flex justify-between rounded-sm p-1 gap-2">
+            <div class="w-full flex flex-col  justify-start items-start gap-8  ">
+
+                <div class=" w-full bg-white   flex items-center py-8 px-2">
+                    <div>
+                    <h1><%= order.length %> -Item Purchased</h1> 
+                <h1>Total Amount :&#x20B9;<%= price %></h1></div>
+                </div>
+                
+            </div>
+            <% } else{%>
+                <div
+                    class="w-11/12  min-h-[50vh] bg-white items-center flex flex-col justify-center rounded-sm p-1 gap-2">
+                    <img src="/img/EMPTYWish.jpg" alt="">
+
+                    <div class="w-full flex justify-center items-center ">NO ORDERS</div>
+                </div>
+                <% } %>
+           
+        </div>
+        </main>
+        <%- include('../components/footer.ejs') %>
+</body>
+
+</html>

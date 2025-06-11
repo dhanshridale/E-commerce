@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="shortcut icon" href="img/k.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body class="m-0 p-0 bg-violet-300  h-full ">
+    <%- include('../components/header.ejs') %>
+        <main class="mt-[80px] mr-[40px] ml-[40px] min-h-[60.6vh] flex flex-col items-center gap-[20px]">
+            <div class="h-[100px] w-11/12 bg-white flex justify-around items-center rounded-sm">
+                <div>Wishlist</div>
+
+            </div>
+
+
+
+
+            <% if(productName.length>0){%>
+                
+                <div class="w-11/12  min-h-[50vh]  items-start flex flex-col rounded-sm p-1 gap-2 ">
+                    <% for (let i=0;i<productName.length;i++){ %>
+                    <div class=" w-full  flex items-center relative gap-4 px-8 py-2 bg-white">
+                        <img src="<%= productName[i].image %>" alt=""class="w-[100px] h-[100px] border-2 border-grey p-2">
+                            <div  class=" text-xl">
+                                <h1><%= productName[i].name%> </h1>
+                                <h1> price:&#x20B9;<%= productName[i].price%></h1>
+                               
+                            </div>
+                        
+                        <div class=" absolute right-1">
+                            <form action="/wish/remove/<%= i %>" method="POST">
+                                <input type="hidden" name="itemName" value="<%= i %>">
+                                <button type="submit"><img src="img/trash.png" class="w-6"></button>
+                            </form>
+                        </div>
+                    </div>
+                        <% } %>
+                </div>
+                
+                    <% } else{%>
+                        <div
+                            class="w-11/12  min-h-[50vh] bg-white items-center flex flex-col justify-center rounded-sm p-1 gap-2">
+                            <img src="/img/EMPTYWish.jpg" alt="">
+
+                            <div class="w-full flex justify-center items-center ">Your Wishlist Is Empty</div>
+                        </div>
+                        <% } %>
+
+
+
+        </main>
+        <%- include('../components/footer.ejs') %>
+</body>
+
+</html>

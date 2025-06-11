@@ -1,0 +1,25 @@
+[33mcommit 4534ce544aac106fa5544c8a39f1ab5e53838415[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 2c19c08 bcfaf1f
+Author: aditya <mishra.adi663@gmail.com>
+Date:   Thu Nov 9 11:34:41 2023 +0530
+
+    Merge branch 'main' of https://github.com/AdityaMishra1716/Minor-Project
+    "Merge branch 'main"
+
+[33mcommit 2c19c085d9159f5b9a2fbe67979fc1da96c41376[m
+Author: aditya <mishra.adi663@gmail.com>
+Date:   Thu Nov 9 11:33:36 2023 +0530
+
+    added scripts folder and also added layout to order ,wishlist and cart page
+
+[33mcommit bcfaf1f9e995197023707e90142fae193bc7001a[m
+Author: ADITYA MISHRA <114287943+AdityaMishra1716@users.noreply.github.com>
+Date:   Wed Nov 8 12:30:13 2023 +0530
+
+    Created README.md
+
+[33mcommit 3381f062f76a3a108bc4868446abc9581e26249c[m
+Author: aditya <mishra.adi663@gmail.com>
+Date:   Wed Nov 8 12:18:00 2023 +0530
+
+    first commit adding all files

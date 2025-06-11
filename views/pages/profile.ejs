@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="shortcut icon" href="img/k.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+
+</head>
+
+<body class="m-0 p-0 bg-violet-300 h-full">
+    <%- include('../components/header.ejs') %>
+        <main class="mt-[80px] mr-[40px] ml-[40px] min-h-[60.6vh]">
+          
+            <div class="Hello flex  flex-col items-center ">
+                <div class="image">
+                    <img src="/img/pp-modified.png" width="150px" height="150px">
+                </div>
+                <div class="text text-xl">
+                    <h3><strong >Hello, Ashish</strong></h3>
+                </div>
+            </div>
+            <div class="main flex justify-center gap-2">
+                <div class="w-11/12  min-h-[50vh]   flex  justify-start  rounded-sm  gap-2">
+                
+                <div class="container1  flex  text-xl flex-col w-[20%]  gap-3">
+                    <a href="#" ><div class="options bg-white p-4 ">Personal Details</div></a>
+                    <a href="#" ><div class="options bg-white p-4 ">Account Settings</div></a>
+                    <a href="#" ><div class="options bg-white p-4 ">My Coupons</div></a>
+                    <a href="#" ><div class="options bg-red-600 text-white p-4 ">Log Out</div></a>
+                </div>
+                
+                    <div class="container2 w-[80%] flex justify-around text-xl relative bg-white">
+                        
+                            <div class="flex flex-col gap-4 py-1">
+                                <h1>Name:</h1>
+                                <h1>Phone NO:</h1>
+                                <h1>Email:</h1>
+                                <h1>city:</h1>
+                                <h1>State:</h1>
+                                <h1>Country:</h1>
+                                <h1>PinCode:</h1>
+                            </div>
+                            <div class="flex flex-col justify-start items-start  gap-4 py-1">
+                                <h1>Ashish Singh</h1>
+                                <h1>6548744158</h1>
+                                <h1>ashish45@gmail.com</h1>
+                                <h1>Bhopal</h1>
+                                <h1>Madhya Pradesh</h1>
+                                <h1>India</h1>
+                                <h1>462016</h1>
+                            </div>
+                            
+                           
+                      
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+        <%- include('../components/footer.ejs') %>
+</body>
+
+</html>

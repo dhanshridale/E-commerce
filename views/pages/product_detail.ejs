@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=detail[0].name %>
+    </title>
+    <link rel="shortcut icon" href="/img/k.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+
+</head>
+
+<body class="m-0 p-0 bg-violet-300  h-full ">
+    <%- include('../components/header.ejs') %>
+        <main
+            class="mt-[80px] mr-[40px] ml-[40px] min-h-[60.6vh] flex flex-col justify-center items-center gap-[20px] ">
+
+            <div class="min-h-[50vh] w-11/12 items-ce flex  rounded-md  gap-4 justify-center ">
+
+
+
+                <div class="w-11/12  min-h-[50vh] bg-white p-4 flex   rounded-sm px-4 gap-8 ">
+                    <div class="border-2 border-grey w-[250px] h-[200px]"><img src="<%= detail[0].image %>" class="w-[220px] h-[180px]" alt="">
+                    </div>
+                    <div class="relative textContainer flex-col flex gap-3">
+                        <h1 class="textContent">
+                            <%= detail[0].name %>
+                        </h1>
+                        <h1>
+                            <%= detail[0].description %>
+                        </h1>
+                        <h1>price:&#x20B9;<%= detail[0].price %>
+                        </h1>
+                        
+                        <div class="absolute bottom-0 flex gap-8">
+                            <div>
+                                <form class="textForm1 flex" action="/wish/submit/<%= detail[0]._id%>" method="post">
+                                    <input type="hidden" name="textToSubmit1" class="textToSubmit1"
+                                        value="<%= detail[0].name %>">
+                                    <button type="submit" name="Wishlist"
+                                        class="submitButton1 bg-orange-500 text-white rounded-sm p-[6px]">Add To
+                                        Wishlist</button>
+                                </form>
+                            </div>
+
+                            <div>
+                                <form class="textForm2" action="/cart/submit/<%= detail[0]._id %>" method="post">
+                                    <div class="flex gap-2 items-center justify-center  ">
+                                        
+                                        <div class=" "><input type="hidden" name="textToSubmit" class="textToSubmit"
+                                                value="<%= detail[0].name%>">
+                                            <input type="submit" name="cart" value="Add To Cart"
+                                                class="submitButton cursor-pointer bg-red-500 text-white rounded-sm p-[6px] ">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+        </main>
+        <%- include('../components/footer.ejs') %>
+            <script src="/scripts/main.js"></script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+<!-- <div class=" w-1/4 border-2 border-red-900 flex flex-col justify-center items-center">Lorem i</div> -->

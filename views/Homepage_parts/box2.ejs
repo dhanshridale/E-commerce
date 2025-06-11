@@ -1,0 +1,52 @@
+<div id="box" class="rounded-[1.5px]
+            bg-white pb-[20px]">
+  <h1 class="ml-[30px] mt-[14px] text-[40px]">Computer Accessories</h1>
+  <div id="card" class="flex justify-center gap-[12px] p-4">
+    <% for (let i=0;i<electric_items.length;i++){ %>
+      <div class="textContainer relative h-[250px] py-8 border-2 border-rgba(105, 105, 105, 0.281) flex flex-col items-center p-1 ">
+
+        <form class="textForm1 flex" action="/wish/submit/<%= electric_items[i]._id %>" method="post">
+          <input type="hidden" name="textToSubmit1" class="textToSubmit1" value="<%= electric_items[i].name %>">
+          <button type="submit" name="Wishlist" class="submitButton1"><img src="img/heart.png"
+              class="w-5 absolute right-1 top-1  " alt=""></button>
+        </form>
+        <form class="textForm3" action="/detail/<%= electric_items[i]._id %>" method="post">
+          <!-- <input type="hidden" name="textToSubmit3" class="textToSubmit3" value="<%= i %>"> -->
+          <button type="submit" class="submitButton3"><img src="<%= electric_items[i].image %>" alt="" class="w-[130px] h-[130px]"></button>
+        </form>
+
+
+        <div class="text-center  text-xl">
+          
+          <h3 class="textContent"><%= electric_items[i].name %></h3>
+          <h1 class="absolute left-0 top-0">&#x20B9;<%= electric_items[i].price %></h1>
+          <!-- Price:&#x20B9;< -->
+          
+        </div>
+        <form class="textForm2" action="/cart/submit/<%= electric_items[i]._id %>" method="post">
+          <div class="flex gap-2 items-center justify-center  ">
+            <div class="w-[100px]  flex   justify-center pb-1 bg-violet-300 rounded-xl ">
+              <input type="hidden" name="quantval" class="quantval">
+              <span class="block cursor-pointer text-xl px-4 text-blue select-none"
+                onClick='decreaseCount(event, this)'>-</span>
+              <input type="submit" value="1" class="inputval w-[30px] text-lg text-center bg-violet-300
+                             text-blue outline-0 appearance-none">
+              <span class="block cursor-pointer text-xl px-4 text-blue select-none"
+                onClick='increaseCount(event, this)'>+</span>
+            </div>
+            <div class=" "><input type="hidden" name="textToSubmit" class="textToSubmit" value="<%= electric_items[i].name%>">
+              <input type="submit" name="cart" value="Add To Cart"
+                class="submitButton cursor-pointer bg-red-500 text-white rounded-sm p-[6px] ">
+            </div>
+          </div>
+        </form>
+      </div>
+      <% } %>
+
+
+
+
+
+
+  </div>
+</div>

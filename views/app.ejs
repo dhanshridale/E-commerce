@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>KharidLO</title>
+    <link rel="shortcut icon" href="img/k.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/slide.css">
+ 
+    
+
+    
+</head>
+
+<body class="m-0 p-0 bg-violet-300  "><%- include('components/header.ejs') %>
+        <main class="mt-[90px] mr-[40px] ml-[40px] flex flex-col gap-[20px]" >
+            <%- include('Homepage_parts/slide.ejs') %>
+            <%- include('Homepage_parts/box1.ejs') %>
+            <%- include('Homepage_parts/box2.ejs') %>
+            <%- include('Homepage_parts/box3.ejs') %>
+           
+        </main>
+
+        <%- include('components/footer.ejs') %>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="/jquery.min.js"></script>  -->
+<script src="/scripts/main.js"></script>
+</body>
+
+</html>
